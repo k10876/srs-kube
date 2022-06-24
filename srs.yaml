@@ -29,7 +29,7 @@ data:
     rtc_server {
         enabled on;
         listen 8000;
-        candidate $CANDIDATE;
+        candidate 20.194.212.150;
     }
 
     vhost rtc.vhost.srs.com {
