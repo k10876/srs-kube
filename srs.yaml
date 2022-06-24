@@ -26,6 +26,21 @@ data:
             hls_dispose     30;
         }
     }
+    rtc_server {
+        enabled on;
+        listen 8000;
+        candidate $CANDIDATE;
+    }
+
+    vhost rtc.vhost.srs.com {
+        rtc {
+            enabled on;
+            rtmp_to_rtc on;
+            rtc_to_rtmp off;
+            nack on;
+            twcc on;
+        }
+    }
 
 ---
 
